@@ -1,60 +1,59 @@
-var assert = require('chai').assert;
-var Vampire = require('../exercises/vampire');
+var assert = require("chai").assert;
+var Vampire = require("../exercises/vampire");
 
-describe('Vampire', function() {
-
-  it.skip('should be a function', function() {
+describe("Vampire", function () {
+  it("should be a function", function () {
     assert.isFunction(Vampire);
   });
 
-  it.skip('should instantiate our good friend, Vampire', function() {
+  it("should instantiate our good friend, Vampire", function () {
     var dracula = new Vampire();
 
     assert.instanceOf(dracula, Vampire);
   });
 
-  it.skip('should have a name', function() {
-    var vampire = new Vampire('Jhun');
+  it("should have a name", function () {
+    var vampire = new Vampire("Jhun");
 
-    assert.equal(vampire.name, 'Jhun');
+    assert.equal(vampire.name, "Jhun");
   });
 
-  it.skip('should have a pet bat as a default', function() {
-    var vampire = new Vampire('Brittany');
+  it("should have a pet bat as a default", function () {
+    var vampire = new Vampire("Brittany");
 
-    assert.equal(vampire.pet, 'bat');
+    assert.equal(vampire.pet, "bat");
   });
 
-  it.skip('should take an argument for pet', function() {
-    var vampire = new Vampire('Jeff', 'fox');
-    var vampyre = new Vampire('David', 'armadillo');
+  it("should take an argument for pet", function () {
+    var vampire = new Vampire("Jeff", "fox");
+    var vampyre = new Vampire("David", "armadillo");
 
-    assert.equal(vampire.pet, 'fox');
-    assert.equal(vampyre.pet, 'armadillo');
+    assert.equal(vampire.pet, "fox");
+    assert.equal(vampyre.pet, "armadillo");
   });
 
-  it.skip('should be thirsty', function() {
-    var vampire = new Vampire('Andy');
+  it("should be thirsty", function () {
+    var vampire = new Vampire("Andy");
 
     assert.equal(vampire.thirsty, true);
   });
 
-  it.skip('should not be thirsty if vampire has drank', function() {
-    var vampire = new Vampire('Meeka');
+  it("should not be thirsty if vampire has drank", function () {
+    var vampire = new Vampire("Meeka");
 
     vampire.drink();
 
     assert.equal(vampire.thirsty, false);
   });
 
-  it.skip('should be start with no ounces of blood drank', function() {
-    var vampire = new Vampire('Bobby');
+  it("should be start with no ounces of blood drank", function () {
+    var vampire = new Vampire("Bobby");
 
     assert.equal(vampire.ouncesDrank, 0);
   });
 
-  it.skip('should drink 10 ounces of blood at a time', function() {
-    var vampire = new Vampire('Margot');
+  it("should drink 10 ounces of blood at a time", function () {
+    var vampire = new Vampire("Margot");
 
     vampire.drink();
     vampire.drink();
@@ -63,8 +62,8 @@ describe('Vampire', function() {
     assert.equal(vampire.ouncesDrank, 30);
   });
 
-  it.skip('should be full after drinking 50 ounces', function() {
-    var vampire = new Vampire('Javi');
+  it("should be full after drinking 50 ounces", function () {
+    var vampire = new Vampire("Javi");
 
     vampire.drink();
 
@@ -90,6 +89,6 @@ describe('Vampire', function() {
 
     assert.equal(vampire.ouncesDrank, 50);
 
-    assert.equal(vampire.drink(), 'I\'m too full to drink anymore!');
+    assert.equal(vampire.drink(), "I'm too full to drink anymore!");
   });
 });
