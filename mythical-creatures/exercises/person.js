@@ -1,5 +1,5 @@
 class Person {
-  constructor(name, mood) {
+  constructor(name) {
     this.name = name;
     this.mood = "frightened";
   }
